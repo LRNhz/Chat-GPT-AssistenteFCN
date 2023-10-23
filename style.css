@@ -89,7 +89,7 @@ button:hover{
 .response-message{
   padding: 1rem;
   border-radius: 10px;
-  color: white;
+  color: black;
   margin: 0;
 }
 
@@ -100,5 +100,6 @@ button:hover{
 
 .response-message{
   text-align: left;
+  text-wrap: balance;
   background-color: var(--gray2);
 }
