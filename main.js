@@ -30,7 +30,7 @@ function sendMessage(){
             model: "text-davinci-003",
             prompt: message.value,
             max_tokens: 2048, // tamanho da resposta
-            temperature: 0.5 // criatividade na resposta
+            temperature: 1.0 // criatividade na resposta
         })
     })
     .then((response) => response.json())

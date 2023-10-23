@@ -7,7 +7,8 @@
 }
 
 body{
-  background-color: var(--white);
+  background-image: url(https://educaethos.com.br/wp-content/uploads/2019/11/95.jpg);
+  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--white);
   display: flex;
@@ -88,7 +89,7 @@ button:hover{
 .response-message{
   padding: 1rem;
   border-radius: 10px;
-  color: white;
+  color: black;
   margin: 0;
 }
 
@@ -99,5 +100,6 @@ button:hover{
 
 .response-message{
   text-align: left;
+  text-wrap: balance;
   background-color: var(--gray2);
 }
