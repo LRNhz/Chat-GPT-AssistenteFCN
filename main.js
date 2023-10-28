@@ -1,5 +1,5 @@
 // Chave de API do OpenAI
-const apiKey = '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'
+const apiKey = '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'
 
 function sendMessage(){
     var message = document.getElementById('message-input')
@@ -50,6 +50,31 @@ function sendMessage(){
         message.value = ''
     })
 }
+
+function analyzeFile() {
+    var fileInput = document.getElementById('fileInput');
+    var fileContent = document.getElementById('fileContent');
+
+    if (fileInput.files.length === 0) {
+        alert('Selecione um arquivo para análise.');
+        return;
+    }
+
+    var file = fileInput.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+        var content = e.target.result;
+        fileContent.textContent = content;
+    };
+
+    if (file.name.endsWith('.pdf') || file.name.endsWith('.docx')) {
+        reader.readAsText(file);
+    } else {
+        alert('Formato de arquivo não suportado. Use um arquivo PDF ou DOCX.');
+    }
+}
+
 
 function showHistory(message,response){
     var historyBox = document.getElementById('history')
